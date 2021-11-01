@@ -70,8 +70,9 @@ stage ('Deploy to production') {
                 } catch (err) {
                     echo: 'caught error: $err'
                 }
-                sh "sshpass -p '$USERPASS' -v
-	
-
+            
+            }
+        }
+    }
 }
-
+}
