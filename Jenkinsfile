@@ -26,7 +26,7 @@ pipeline{
 		stage('Push') {
 
 			steps {
-				sh 'sudo docker push syrgak/project:latest'
+				sh 'sudo docker push foracloud/syrgak:latest'
 			}
 		}
 	}
