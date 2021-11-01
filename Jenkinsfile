@@ -11,7 +11,7 @@ pipeline{
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t syrgak/project:latest .'
+				sh 'sudo docker build -t syrgak/project:latest .'
 			}
 		}
 
@@ -19,21 +19,21 @@ pipeline{
                 stage('Login') {
 
                         steps {
-                            sh 'docker login -p $DOCKERHUB_CREDENTIALS_PSW -u $DOCKERHUB_CREDENTIALS_USR'
+                            sh 'sudo docker login -p $DOCKERHUB_CREDENTIALS_PSW -u $DOCKERHUB_CREDENTIALS_USR'
                         }
                 }
 
 		stage('Push') {
 
 			steps {
-				sh 'docker push syrgak/project:latest'
+				sh 'sudo docker push syrgak/project:latest'
 			}
 		}
 	}
         
         post {
             always {
-                sh 'docker logout'
+                sh 'sudo docker logout'
             }
         }
 
