@@ -11,7 +11,7 @@ pipeline{
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t tynchtyk/project:latest .'
+				sh 'docker build -t syrgak/project:latest .'
 			}
 		}
 
