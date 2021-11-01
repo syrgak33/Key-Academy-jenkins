@@ -34,11 +34,12 @@ pipeline{
         post {
             always {
                 sh 'sudo docker logout'
-            }
+            
+	    
+	    
+	    }
         }
-
-}
-stage ('Deploy to staging') {
+	stage ('Deploy to staging') {
   
     steps {
         withCredentials ([usernamePassword(credentialsId: 'webserver_login', usernameVariable: 'USERNAME', passwordVariable: 'USERPASS')]) {
@@ -70,3 +71,7 @@ stage ('Deploy to production') {
                     echo: 'caught error: $err'
                 }
                 sh "sshpass -p '$USERPASS' -v
+	
+
+}
+
