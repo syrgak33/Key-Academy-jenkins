@@ -11,7 +11,7 @@ pipeline{
 		stage('Build') {
 
 			steps {
-				sh 'sudo docker build -t syrgak/project:latest .'
+				sh 'sudo docker build -t foracloud/syrgak:latest .'
 			}
 		}
 
