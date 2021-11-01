@@ -26,7 +26,7 @@ pipeline{
 		stage('Push') {
 
 			steps {
-				sh 'docker push tynchtyk/project:latest'
+				sh 'docker push syrgak/project:latest'
 			}
 		}
 	}
